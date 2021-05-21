@@ -15,7 +15,7 @@
         android:layout_marginRight="158dp"
         android:layout_marginBottom="8dp"
         android:text="Crie uma conta"
-        android:textColor="@color/black"
+        android:textColor="#333"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
@@ -35,21 +35,22 @@
         android:text="Junte-se a mais de meio milhão de pessoas"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
+        app:layout_constraintBottom_toTopOf="@+id/btnLinkCadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
-        android:id="@+id/btnCadastrar"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnLinkCadastro"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginLeft="144dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginRight="144dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginRight="120dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/botao_customizado"
         android:onClick="cadastrar"
         android:text="Cadastre-se"
         android:textSize="16sp"
@@ -73,5 +74,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCadastrar" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLinkCadastro" />
 </androidx.constraintlayout.widget.ConstraintLayout>

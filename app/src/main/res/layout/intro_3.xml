@@ -27,7 +27,7 @@
         android:layout_marginBottom="8dp"
         android:gravity="center"
         android:text="Organize suas contas \n onde estiver"
-        android:textColor="@android:color/black"
+        android:textColor="#333"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
