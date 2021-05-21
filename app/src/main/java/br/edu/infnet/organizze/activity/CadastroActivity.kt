@@ -9,6 +9,10 @@ import br.edu.infnet.organizze.R
 import br.edu.infnet.organizze.model.Usuario
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException
+import java.lang.Exception
 
 class CadastroActivity : AppCompatActivity() {
 
@@ -64,7 +68,20 @@ class CadastroActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                         Toast.makeText(this, "Usuário cadastrado com sucesso", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this, "Erro ao cadastrar usuário", Toast.LENGTH_SHORT).show()
+                    var excecao: String = ""
+
+                    try {
+                        throw task.exception!!
+                    } catch (e: FirebaseAuthWeakPasswordException) {
+                        excecao = "Digite uma senha mais forte"
+                    } catch (e: FirebaseAuthInvalidCredentialsException) {
+                        excecao = "Digite um email válido"
+                    } catch (e: FirebaseAuthUserCollisionException) {
+                        excecao = "Email já cadastrado"
+                    } catch (e: Exception) {
+                        excecao = "Erro ao cadastrar usuário"
+                    }
+                    Toast.makeText(this, excecao, Toast.LENGTH_SHORT).show()
                 }
         })
     }
