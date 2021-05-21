@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "963121389867",
+    "project_id": "organizze-6d2ee",
+    "storage_bucket": "organizze-6d2ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963121389867:android:c1fc632868def3cdf3e56e",
+        "android_client_info": {
+          "package_name": "br.edu.infnet.organizze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963121389867-niffbddgppjchb30bkpblg4ejn5d9pge.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.edu.infnet.organizze",
+            "certificate_hash": "9b8ff5781ae98a8cdf9d0f23c3b3a6e9a15d5563"
+          }
+        },
+        {
+          "client_id": "963121389867-ud41jt3uj6i142amqaj7hk4nvad6pn3c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOocfsjvK4LzFtxGnNPtR8aw76BPC0XNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963121389867-ud41jt3uj6i142amqaj7hk4nvad6pn3c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
