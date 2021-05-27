@@ -26,7 +26,7 @@ class CadastroActivity : AppCompatActivity() {
         val nome = findViewById<EditText>(R.id.editNome)
         val email = findViewById<EditText>(R.id.editEmail)
         val senha = findViewById<EditText>(R.id.editSenha)
-        val btnCadastrar = findViewById<Button>(R.id.btnCadastrar)
+        val btnCadastrar = findViewById<Button>(R.id.btnLogin)
 
         btnCadastrar.setOnClickListener {
             val textoNome = nome.text.toString()
@@ -68,18 +68,16 @@ class CadastroActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                         Toast.makeText(this, "Usuário cadastrado com sucesso", Toast.LENGTH_SHORT).show()
                 } else {
-                    var excecao: String = ""
-
-                    try {
+                    var excecao = try {
                         throw task.exception!!
                     } catch (e: FirebaseAuthWeakPasswordException) {
-                        excecao = "Digite uma senha mais forte"
+                        "Digite uma senha mais forte"
                     } catch (e: FirebaseAuthInvalidCredentialsException) {
-                        excecao = "Digite um email válido"
+                        "Digite um email válido"
                     } catch (e: FirebaseAuthUserCollisionException) {
-                        excecao = "Email já cadastrado"
+                        "Email já cadastrado"
                     } catch (e: Exception) {
-                        excecao = "Erro ao cadastrar usuário"
+                        "Erro ao cadastrar usuário"
                     }
                     Toast.makeText(this, excecao, Toast.LENGTH_SHORT).show()
                 }
